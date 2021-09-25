@@ -1,0 +1,99 @@
+#todo-page {
+  z-index: 5;
+  position: absolute;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  background-color: rgb(0, 0, 0, 0.8);
+  align-items: center;
+  top: 200px;
+}
+
+.page-up {
+  animation: slide-top 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-top {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.page-down {
+  animation: slide-down 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5px 20px 20px;
+}
+
+.iconPosition {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+
+.fa-check-circle {
+  cursor: pointer;
+  margin: 0px 20px 15px 0px;
+  transition: color ease-in-out 0.3s;
+}
+.fa-check-circle:hover {
+  color: #27ae60;
+}
+
+.fa-trash-restore {
+  cursor: pointer;
+  margin: 0px 15px 0px 20px;
+  transition: color ease-in-out 0.3s;
+}
+.fa-trash-restore:hover {
+  color: #ff105e;
+}
+
+#todo-form {
+  display: flex;
+}
+
+.pageDown {
+  cursor: pointer;
+  padding: 0px 5px 0px 5px;
+  color: #ff105e;
+  background-color: white;
+  border-radius: 5px;
+}

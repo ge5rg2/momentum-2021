@@ -1,0 +1,71 @@
+.hidden {
+  display: none;
+}
+
+body {
+  background-color: #333333;
+  font-family: "돋음", Dotum, Baekmuk Dotum, Undotum, Apple Gothic, Latin font,
+    sans-serif;
+  color: #bdc3c7;
+  display: flex;
+  flex-direction: column;
+}
+
+.clicked {
+  color: #27ae60;
+}
+
+#innerBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#log-out-div {
+  display: flex;
+  position: absolute;
+}
+
+#login-form {
+  margin: 50px;
+}
+
+#greeting {
+  text-align: center;
+  font-size: 50px;
+}
+
+#weather-div {
+  display: flex;
+  font-weight: bold;
+  position: absolute;
+  right: 0px;
+}
+
+#weather-refresh {
+  cursor: pointer;
+  transition: color ease-in-out 0.5s;
+}
+
+#weather-refresh:hover {
+  color: #27ae60;
+}
+
+#clockDate,
+#d-day {
+  margin: 2px;
+  font-size: small;
+}
+
+#quote {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+#weather-refresh {
+  margin: 0px 10px;
+}

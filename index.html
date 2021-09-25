@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/clock.css" />
+    <link rel="stylesheet" href="css/todo.css" />
+    <link rel="stylesheet" href="css/icons.css"/>
+    <title>Momentum App</title>
+  </head>
+  <body>
+    <!-- 로그아웃 양식-->
+    <div id="log-out-div">
+      <form class="hidden" id="log-out">
+        <input type="submit" value="Log out" />
+      </form>
+    </div>
+    <div id="innerBody">
+      <!--시계-->
+      <div id="body-clock">
+        <div class="clock"> 
+          <div class="hour"> 
+            <div id="hr" class="hr"></div> 
+          </div> 
+          <div class="min"> 
+            <div id="mn" class="mn"></div> 
+          </div> 
+          <div class="sec"> 
+            <div id="sc" class="sc"></div> 
+          </div> 
+        </div>
+      </div>
+      <!--날짜-->
+      <h2 id="clockDate">00:00</h2>
+      <!--디데이-->
+      <h3 id="d-day"></h3>
+      <!-- 로그인 양식-->
+      <form class="hidden" id="login-form">
+            <input
+              required
+              maxlength="10"
+              type="text"
+              placeholder="What is your name?"
+            />
+            <input type="submit" value="Log In" />
+      </form>
+      <!--로그인 후 환영 메시지-->
+      <h1 id="greeting" class="hidden"></h1>
+      <!--TODO-->
+      <div id="todo-page" class="hidden">
+        <form id="todo-form">
+          <input maxlength="10" type="text" placeholder="Add Task" required/>
+          <span class="pageDown">✖</span>
+        </form>
+        <ul id="todo-list">
+        </ul>
+      </div>
+      <div class="icons">
+        <i class="far fa-sticky-note fa-lg"></i>
+      </div>
+      <!--띵언모음-->
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!--날씨-->
+    <div id="weather-div">
+      <div id="weather">
+        <span></span>
+        <span></span>
+      </div>
+      <!--날씨 새로고침-->
+      <div class="hidden" id="weather-refresh">
+        <i class="fas fa-sync-alt fa-lg"></i>
+      </div>
+    </div>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="https://kit.fontawesome.com/6b29387220.js" crossorigin="anonymous"></script>
+  </body>
+</html>
