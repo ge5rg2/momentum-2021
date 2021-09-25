@@ -69,3 +69,14 @@ body {
 #weather-refresh {
   margin: 0px 10px;
 }
+
+@media screen and (max-width: 640px) {
+  #quote {
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  #body-clock {
+    margin-top: 10px;
+  }
+}
