@@ -3,6 +3,7 @@ const refresh = document.querySelector("#weather-refresh");
 const weather = document.querySelector("#weather span:first-child");
 const city = document.querySelector("#weather span:last-child");
 
+
 function onGeoOk(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
