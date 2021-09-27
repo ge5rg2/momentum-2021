@@ -25,8 +25,18 @@ function onLogoutSubmit(event) {
 }
 
 function paintGreetings(username) {
+  let day = new Date();
+  let dayTime = day.getHours();
   logOut.classList.remove(HIDDEN_CLASSNAME);
-  greeting.innerText = `Hello ${username}`;
+  if(dayTime >= 6 && dayTime < 12) {
+    greeting.innerText = `Good morning ${username}`;
+  } else if(dayTime >=12 && dayTime < 19) {
+    greeting.innerText = `Good afternoon ${username}`;
+  } else if(dayTime >= 19 || dayTime < 2) {
+    greeting.innerText = `Good evening ${username}`;
+  } else if(dayTime >= 2 || dayTime < 6) {
+    greeting.innerText = `You need to sleep ${username}`;
+  }
   greeting.classList.remove(HIDDEN_CLASSNAME);
   logOut.addEventListener("submit", onLogoutSubmit);
 }

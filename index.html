@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/clock.css" />
     <link rel="stylesheet" href="css/todo.css" />
     <link rel="stylesheet" href="css/icons.css"/>
+    <link rel="stylesheet" href="css/birds.css"/>
     <title>Momentum App</title>
     <meta property="og:title" content="Momentum App">
     <meta property="og:description" content="What are the things you need to focus on today?">
@@ -63,7 +64,12 @@
         <ul id="todo-list">
         </ul>
       </div>
-      <div class="hidden" id="map"></div>
+      <!--랜덤 새 이미지-->
+      <div id="daily-bird" class="hidden">
+        <div>
+          <span class="pageDown"></span>
+        </div>
+      </div>
       <div class="icons">
         <div id="note">
           <i class="far fa-sticky-note fa-lg"></i>
@@ -97,6 +103,7 @@
     <script src="js/quotes.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/birds.js"></script>
     <script src="https://kit.fontawesome.com/6b29387220.js" crossorigin="anonymous"></script>
   </body>
 </html>

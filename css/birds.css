@@ -1,0 +1,14 @@
+#daily-bird {
+  z-index: 5;
+  position: absolute;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  align-items: center;
+  top: 70px;
+}
+
+#daily-bird > div > img {
+  height: 300px;
+  width: 400px;
+}
