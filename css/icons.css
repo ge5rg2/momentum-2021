@@ -44,3 +44,14 @@
 #bird:hover {
   opacity: 1;
 }
+
+#paint-icon {
+  opacity: 0.5;
+  display: flex;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+#paint-icon:hover {
+  opacity: 1;
+}

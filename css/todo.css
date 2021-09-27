@@ -102,5 +102,10 @@
   font-size: 15px;
   color: #ff105e;
   background-color: white;
+  opacity: 0.7;
   border-radius: 5px;
+  transition: ease-in-out 0.3s;
+}
+.pageDown:hover {
+  opacity: 1;
 }
