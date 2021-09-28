@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/clock.css" />
     <link rel="stylesheet" href="css/todo.css" />
@@ -21,7 +22,7 @@
     <!-- 로그아웃 양식-->
     <div id="log-out-div">
       <form class="hidden" id="log-out">
-        <input type="submit" value="Log out" />
+        <input type="submit" value="Reset Profile" />
       </form>
     </div>
     <div id="innerBody">
@@ -51,7 +52,7 @@
               type="text"
               placeholder="What is your name?"
             />
-            <input type="submit" value="Log In" />
+            <input type="submit" value="Log In" class="hidden"/>
       </form>
       <!--로그인 후 환영 메시지-->
       <h1 id="greeting" class="hidden"></h1>
