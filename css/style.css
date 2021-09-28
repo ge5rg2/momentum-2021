@@ -61,6 +61,7 @@ body {
 #d-day {
   margin: 2px;
   font-size: small;
+  font-weight: bold;
 }
 
 #quote {
@@ -72,6 +73,7 @@ body {
   padding-top: 50px;
 }
 
+/*모바잏 화면 설정*/
 @media screen and (max-width: 640px) {
   #quote {
     margin-top: 20px;
@@ -115,11 +117,6 @@ body {
   opacity: 1;
 }
 
-#daily-bird > div > span {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 15px;
-  font-weight: bold;
-  color: #333333;
-  background-color: white;
+#log-out > input:active {
+  transform: scale(0.8);
 }

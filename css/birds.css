@@ -11,4 +11,18 @@
 #daily-bird > div > img {
   height: 300px;
   width: 400px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.438), 0 1px 3px rgba(0, 0, 0, 0.329);
+}
+
+#daily-bird > div > span {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+  background-color: white;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.438), 0 1px 3px rgba(0, 0, 0, 0.329);
 }

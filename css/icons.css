@@ -23,6 +23,10 @@
   opacity: 1;
 }
 
+#note:active {
+  transform: scale(0.8);
+}
+
 #map-icon {
   opacity: 0.5;
   display: flex;
@@ -32,6 +36,10 @@
 
 #map-icon:hover {
   opacity: 1;
+}
+
+#map-icon:active {
+  transform: scale(0.8);
 }
 
 #bird {
@@ -45,6 +53,10 @@
   opacity: 1;
 }
 
+#bird:active {
+  transform: scale(0.8);
+}
+
 #paint-icon {
   opacity: 0.5;
   display: flex;
@@ -54,4 +66,8 @@
 
 #paint-icon:hover {
   opacity: 1;
+}
+
+#paint-icon:active {
+  transform: scale(0.8);
 }
