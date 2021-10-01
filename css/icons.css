@@ -71,3 +71,33 @@
 #paint-icon:active {
   transform: scale(0.8);
 }
+
+#timer-icon {
+  opacity: 0.5;
+  display: flex;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+#timer-icon:hover {
+  opacity: 1;
+}
+
+#timer-icon:active {
+  transform: scale(0.8);
+}
+
+#game-icon {
+  opacity: 0.5;
+  display: flex;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+#game-icon:hover {
+  opacity: 1;
+}
+
+#game-icon:active {
+  transform: scale(0.8);
+}
