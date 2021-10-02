@@ -3,6 +3,7 @@ const ctx = canvas.getContext("2d");
 const colors = document.getElementsByClassName("jsColor");
 /* Context는 Canvas안에서의 픽셀을 다루는 것 */
 
+
 canvas.width = 500;
 canvas.height = 500;
 /* css뿐만 아니라 js에도 pixel을 위해 width와 height를 지정해야 한다. */
@@ -31,8 +32,9 @@ function onMouseMove(event) {
     }
 }
 
-function onMouseDown(event) {
-    painting = true;
+function handleColorClick(event) {
+    const color = event.target.style.backgroundColor;
+    ctx.strokeStyle = color;
 }
 
 if(canvas) {
@@ -63,3 +65,4 @@ function clickedBtn(event) {
 }
 
 clickPaint.addEventListener("click", clickedBtn);
+Array.from(colors).forEach(color => color.addEventListener("click", handleColorClick));
