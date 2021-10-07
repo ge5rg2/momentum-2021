@@ -134,3 +134,11 @@ function clickedBird(event) {
 
 clickBird.addEventListener("click", clickedBird);
 // todo 페이지와 유사한 방식으로 만듬 //
+
+function handleRC(event) {
+    event.preventDefault();
+}
+
+if(birdBody) {
+    birdBody.addEventListener("contextmenu", handleRC);
+}

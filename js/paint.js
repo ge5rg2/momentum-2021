@@ -5,6 +5,7 @@ const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const eraser = document.getElementById("jsEraser");
+const saveBtn = document.getElementById("jsSave");
 
 const INITIAL_COLOR = "##2c2c2c";
 const CANVAS_SIZE = 500;
@@ -12,6 +13,9 @@ const CANVAS_SIZE = 500;
 canvas.width = CANVAS_SIZE;
 canvas.height = CANVAS_SIZE;
 /* css뿐만 아니라 js에도 pixel을 위해 width와 height를 지정해야 한다. */
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+/*기본 배경색은 투명으로 되어있기 때문에 시작 canvas 화면을 하얀색으로 지정 */
 ctx.strokeStyle = INITIAL_COLOR;
 ctx.fillStyle = INITIAL_COLOR;
 ctx.lineWidth = 2.5;
@@ -92,6 +96,18 @@ function handleCanvasClick() {
     }
 }
 
+function handleCM(event) {
+    event.preventDefault();
+    /* 마우스 우클릭 방지 함수 */
+} 
+
+function handleSaveClick() {
+    const image = canvas.toDataURL();
+    const link = document.createElement("a");
+    link.href = image;
+    link.download = "PaintJS[🎨]";
+    link.click();
+}
 
 if(canvas) {
     canvas.addEventListener("mousemove", onMouseMove);
@@ -99,6 +115,7 @@ if(canvas) {
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave", stopPainting);
     canvas.addEventListener("click", handleCanvasClick);
+    canvas.addEventListener("contextmenu", handleCM);
 }
 
 const paintPageDown = document.querySelector("#paint-body .pageDown");
@@ -134,4 +151,8 @@ if(mode) {
 
 if(eraser) {
     eraser.addEventListener("click", handleEraserClick);
+}
+
+if(saveBtn) {
+    saveBtn.addEventListener("click", handleSaveClick);
 }
