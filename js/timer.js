@@ -38,7 +38,7 @@ function handleStartTimer() {
     } else if(pauseFlag === true) {
         clearInterval(timer);
         pauseFlag = false;
-        timerStart.innerText = "start";
+        timerStart.innerText = "restart";
     }
 }
 
@@ -53,6 +53,7 @@ function handleStopTimer() {
         clearInterval(timer);
         time = 0;
         timerClock.innerText = "00:00:00";
+        timerStart.innerText = "start";
     }
 }
 
