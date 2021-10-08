@@ -1,0 +1,54 @@
+.main-timer {
+  z-index: 4;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: #2c2c2c;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.26), 0 1px 3px rgba(0, 0, 0, 0.329);
+}
+
+.timer-clock {
+  margin-bottom: 5px;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.timerBtnControl button {
+  all: unset;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  opacity: 0.7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.438), 0 1px 3px rgba(0, 0, 0, 0.329);
+  padding: 5px 0px;
+  width: 60px;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.timerBtnControl button:hover {
+  opacity: 1;
+  color: black;
+}
+
+.timerBtnControl button:active {
+  transform: scale(0.9);
+}
+
+.main-timer span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+}

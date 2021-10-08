@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/icons.css"/>
     <link rel="stylesheet" href="css/birds.css"/>
     <link rel="stylesheet" href="css/paint.css"/>
+    <link rel="stylesheet" href="css/timer.css"/>
     <title>Momentum App</title>
     <meta property="og:title" content="Momentum App">
     <meta property="og:description" content="What are the things you need to focus on today?">
@@ -100,8 +101,13 @@
       </div>
       <!-- Timer-->
       <div>
-        <div class="main-timer" id="mainTimer">
-          <span class="timer-clock" id="timerClock"></span>
+        <div class="main-timer hidden" id="mainTimer">
+          <span class="pageDown">✖</span>
+          <div class="timer-clock" id="timerClock">00:00:00</div>
+          <div class="timerBtnControl">
+            <button id="jsTimerStartBtn">start</button>
+            <button id="jsTimerStopBtn">stop</button>
+          </div>
         </div>
       </div>
       <div class="icons">
@@ -148,6 +154,7 @@
     <script src="js/weather.js"></script>
     <script src="js/birds.js"></script>
     <script src="js/paint.js"></script>
+    <script src="js/timer.js"></script>
     <script src="https://kit.fontawesome.com/6b29387220.js" crossorigin="anonymous"></script>
   </body>
 </html>

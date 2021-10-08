@@ -6,6 +6,7 @@ const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const eraser = document.getElementById("jsEraser");
 const saveBtn = document.getElementById("jsSave");
+const cursorBtn = document.querySelector(".controls__btns");
 
 const INITIAL_COLOR = "##2c2c2c";
 const CANVAS_SIZE = 500;
@@ -55,7 +56,7 @@ function onMouseMove(event) {
         ctx.stroke();
     }
     if(erasingStart === true){
-        ctx.clearRect(x,y,20,20);
+        ctx.clearRect(x,y,25,25);
     }
 }
 
@@ -139,6 +140,7 @@ function clickedBtn(event) {
 }
 
 clickPaint.addEventListener("click", clickedBtn);
+
 Array.from(colors).forEach(color => color.addEventListener("click", handleColorClick));
 
 if(range) {
@@ -156,3 +158,15 @@ if(eraser) {
 if(saveBtn) {
     saveBtn.addEventListener("click", handleSaveClick);
 }
+/*
+function changeCursor(event) {
+    if(event === mode) {
+        canvas.style.cursor = "url(../cursor/cursor__fill.cur), auto";
+    } else if (event === eraser) {
+        canvas.style.cursor = "url(../cursor/cursor__eraser.cur), auto";
+    } else {
+        canvas.style.cursor = "auto";
+    }
+}
+
+cursorBtn.addEventListener("click" , changeCursor); */
