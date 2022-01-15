@@ -12,6 +12,39 @@
   margin: 0px 20px 0px 20px;
 }
 
+#nomad {
+  opacity: 0.5;
+  display: flex;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+#nomad:hover {
+  opacity: 1;
+}
+
+#youtube {
+  opacity: 0.5;
+  display: flex;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+#youtube:hover {
+  opacity: 1;
+}
+
+#naver {
+  opacity: 0.5;
+  display: flex;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+#naver:hover {
+  opacity: 1;
+}
+
 #note {
   opacity: 0.5;
   display: flex;

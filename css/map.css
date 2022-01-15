@@ -1,0 +1,16 @@
+#map-page {
+    z-index: 5;
+    position: absolute;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    align-items: center;
+    top: 200px;
+    right: 50px;
+}
+
+#map-page-main {
+    display: flex;
+    border: 1px solid gray;
+    opacity: 1;
+}
