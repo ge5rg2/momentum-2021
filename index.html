@@ -72,13 +72,13 @@
       <div id="map-page" class="hidden">
         <span id="map-page-main" class="pageDown">
           <a id="nomad" title="Nomad Coder" href="https://nomadcoders.co/" target='_blank'>
-            <img style="height: 50px; width: 50px;" src="pageIcon/nomad.png">
+            <img style="height: 65px; width: 65px;" src="pageIcon/nomad.png">
           </a>
           <a id="youtube" title="YouTube" href="https://www.youtube.com/" target='_blank'>
-            <img style="height: 50px; width: 50px;" src="pageIcon/youtube.png">
+            <img style="height: 65px; width: 65px;" src="pageIcon/youtube.png">
           </a>
           <a id="naver" title="Naver" href="https://www.naver.com/" target='_blank'>
-            <img style="height: 50px; width: 50px;" src="pageIcon/naver.png">
+            <img style="height: 65px; width: 65px;" src="pageIcon/naver.png">
           </a>
         </span>
       </div>
@@ -125,6 +125,9 @@
           </div>
         </div>
       </div>
+      <!-- Converter-->
+      <div id="root" class="hidden"></div>
+      <!-- Icons -->
       <div class="icons">
         <div id="note">
           <i class="far fa-sticky-note fa-lg"></i>
@@ -141,8 +144,8 @@
         <div id="timer-icon">
           <i class="fas fa-stopwatch fa-lg"></i>
         </div>
-        <div id="game-icon">
-          <i class="fas fa-gamepad fa-lg"></i>
+        <div id="convert-icon">
+          <i class="fas fa-exchange-alt fa-lg"></i>
         </div>
       </div>
       <!--띵언모음-->
@@ -172,5 +175,85 @@
     <script src="js/timer.js"></script>
     <script src="js/mapPage.js"></script>
     <script src="https://kit.fontawesome.com/6b29387220.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const root = document.getElementById("root");
+        const convertIcon = document.querySelector(".fa-exchange-alt");
+        const handleClickConvert = () => {
+          root.classList.remove("page-down");
+          root.classList.add("page-up");
+          root.classList.remove("hidden");
+          root.classList.add("flex");
+        };
+        convertIcon.addEventListener("click", handleClickConvert);
+        const MinToHour = () => {
+            const [min, setMin] = React.useState(0);
+            const [inverted, setInverted] = React.useState(false);
+            const onChange = (event) => {
+                setMin(event.target.value);
+            }
+            const timeOnClick = () => {
+                setMin(0);
+            }
+            const timeInverted = () => {
+                setInverted((current) => !current);
+                timeOnClick();
+            }
+            return (
+                <div>
+                    <h3>Minutes to Hours</h3>
+                    <div>
+                        <label htmlFor="min">Min</label>
+                        <input onChange={onChange} value={inverted ? Math.round(min*60) : min} id="min" placeholder="Min" type="number" disabled={inverted}/>
+                    </div>
+                    <div>
+                        <label htmlFor="hour">Hours</label>
+                        <input onChange={onChange} value={inverted ? min : Math.round(min/60)} id="hour" placeholder="Hour" type="number" disabled={!inverted}/>
+                    </div>
+                    <button onClick={timeOnClick}>Reset</button>
+                    <button onClick={timeInverted}>{inverted ? "Turn Back" : "Inverted" }</button>
+                </div>
+            );
+        };
+        const KmToMile = () => {
+            return (
+                <h3>KM to Miles</h3>
+            );
+        };
+        const App = () => {
+            const [index, setIndex] = React.useState("xx")
+            const onSelect = (event) => {
+                setIndex(event.target.value);
+            }
+            return (
+                <div>
+                  <div>
+                    <div>Super Converter</div>
+                    <span id="convertPageDown" class="pageDown">✖</span>
+                  </div>
+                      <select value={index} onChange={onSelect}>
+                          <option value="xx">Select your units</option>
+                          <option value="0">Minutes & Hours</option>
+                          <option value="1">KM & Miles</option>
+                      </select>
+                      <hr />
+                      {index === "xx" ? <h3>Please select your units</h3> : null}
+                      {index === "0" ? <MinToHour /> : null }
+                      {index === "1" ? <KmToMile /> : null}
+                </div>
+            );
+        };
+        ReactDOM.render(<App />, root);
+        const convertPageDown = document.querySelector("#convertPageDown");
+            const handleHiddenConvert = (event) => {
+              event.preventDefault();
+              root.classList.remove("page-up");
+              root.classList.add("page-down");
+              setTimeout(function(event) {root.classList.remove("flex"); root.classList.add("hidden");}, 501);
+            };
+            convertPageDown.addEventListener("click", handleHiddenConvert);
+    </script>
   </body>
 </html>

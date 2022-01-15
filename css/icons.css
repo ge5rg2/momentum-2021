@@ -120,17 +120,17 @@
   transform: scale(0.8);
 }
 
-#game-icon {
+#convert-icon {
   opacity: 0.5;
   display: flex;
   cursor: pointer;
   transition: ease-in-out 0.3s;
 }
 
-#game-icon:hover {
+#convert-icon:hover {
   opacity: 1;
 }
 
-#game-icon:active {
+#convert-icon:active {
   transform: scale(0.8);
 }
